@@ -1,18 +1,11 @@
 package com.example.ignaciogiagante.modernartui;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.RectShape;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -33,9 +26,7 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View fragment = inflater.inflate(R.layout.fragment_main, container, false);
-
-        return fragment;
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
     @Override
@@ -82,9 +73,6 @@ public class GalleryFragment extends Fragment {
     }
 
     private void updateRectTwo(int value){
-        Toast.makeText(getActivity(), "seek bar progress:" + value,
-                Toast.LENGTH_SHORT).show();
-
         mRectTwo.setBackgroundColor(interpolateColor(0xFFFFE597,
                 0xFFD64F97, value / proportion));
         mRectTwo.setBackgroundColor(interpolateColor(0xFFD64F97,
