@@ -41,7 +41,7 @@ public class SeekBarFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
+                Toast.makeText(getActivity(), "Progress: " + progressChanged, Toast.LENGTH_SHORT).show();
             }
         });
 
